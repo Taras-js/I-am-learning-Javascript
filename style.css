@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+body, html {
+    overflow-x: hidden;
+    background-image: url(Img/trava-lezviya.svg);
+    height: 800px;
+
+}
+
+.my_plans {
+
+    height: 1000px;
+    width: auto;
+}
+
+nav {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+
+#checkbox-menu,
+.toggle {
+    display: none;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    background: #000;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    align-self: center;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: background .2s linear;
+}
+
+.menu li a:hover {
+    background: darkorange;
+    border-radius: 3px;
+}
+
+.menu li a.logo {
+    font-size: 21px;
+    margin-right: 0;
+}
+
+.menu li a.contacts {
+    margin-right: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.taras-slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-gap: 40px;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.business__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    background-image: url("Img/background.jpg");
+    width: 75%;
+    height: 400px;
+    border-radius: 30px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+
+}
+
+.photo {
+    height: 400px;
+    border-radius: 20px;
+}
+
+.current-photos {
+    width: 1000px;
+    border-radius: 50px;
+}
+
+.next-button {
+    background-color: #412e2e;
+    height: 50px;
+    border-radius: 30px;
+    color: azure;
+    margin-top: 300px;
+}
+
+.prev-button {
+    background-color: #412e2e;
+    height: 50px;
+    border-radius: 30px;
+    color: azure;
+    margin-top: 300px;
+}
+
+.intro {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+.points__implemented {
+    display: grid;
+    margin: 0 auto;
+    width: 50%;
+    grid-gap: 30px;
+
+}
+intro.intro-text {
+    position: absolute;
+    font-size: 62px;
+    right: 750px;
+    top: 220px;
+    color: blue;
+}
+
+
+.intro-text-My_plans {
+    color: white;
+}
+
+.points li {
+    color: black;
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+.data li {
+    color: black;
+    font-size: 24px;
+    margin-left: 0;
+}
+
+.intro-href {
+    text-decoration: none;
+    color: white;
+}
+
+.intro-contacts {
+    background-color: darkorange;
+    max-width: 590px;
+    position: absolute;
+    right: 170px;
+    /*top: 638px;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    border-radius: 20px;
+
+}
+
+.item img {
+    width: 1200px;
+    height: auto;
+    align-self: center;
+    border-radius: 30px;
+    border-bottom-color: black;
+    padding-left: 50px;
+}
+
+.neon {
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+.href__button {
+    background-color: coral;
+    border-radius: 10px;
+}
+
+.href__button a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 765px) {
+    .toggle {
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        width: 100%;
+        color: #000;
+        background: yellow;
+        transition: all .1s linear;
+    }
+
+    .taras-slider {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 3px;
+        width: 100%;
+
+
+    }
+
+    .current-photos {
+
+        margin-bottom: 3px;
+
+    }
+
+    .prev-button {
+        margin-top: 3px;
+    }
+
+    .next-button {
+        margin-top: 3px;
+
+    }
+
+    .toggle:hover {
+        background: yellow;
+    }
+
+    #checkbox-menu:checked + label .touch li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+
+    #checkbox-menu:checked + label .touch {
+        height: 350px;
+
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0;
+        transition: height .3s linear;
+    }
+
+    .menu li {
+        /*display: flex;*/
+        text-align: center;
+        width: 80%;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .item img {
+        width: 95%;
+
+    }
+
+    .menu li a {
+
+    }
+
+    .intro-contacts {
+        margin-top: 200px;
+        justify-content: center;
+    }
+
+    .business__card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+        margin-left: 0;
+        border-radius: 30px;
+
+
+    }
+
+    .photo {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .data li {
+        color: #000000;
+        font-size: 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+
