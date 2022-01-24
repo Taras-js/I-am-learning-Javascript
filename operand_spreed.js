@@ -33,3 +33,13 @@ function reverseWord(str) {
 }
 
 console.log(reverseWord('Перехватчики'))
+str.indexOf('у')
+// console.log(str.indexOf('ш'))
+console.log(str.lastIndexOf('ш'))
+
+function convertUSD (rate, ...totals) {
+    console.log(rate, totals)
+    return  totals.map(total => total/rate);
+}
+const converte = convertUSD(75, 10000, 11000, 45000)
+console.log(converte)
