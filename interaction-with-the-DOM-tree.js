@@ -84,7 +84,7 @@ function generateAutoCard (brand, year, color) {
 // Поместить эти 3 карточки внутрь DIV с классом autos
 const innerAutos = carsList.map(car => {
     return generateAutoCard(car.brand, car.year, car.color);
-});
+}).join(' ');
 autos.innerHTML = innerAutos;
 // Поместить DIV c классом autos на страницу DOM - до DIV с классом wrapper
 newDiv.insertAdjacentElement('beforebegin', autos)
@@ -100,6 +100,4 @@ function deleteButton (e) {
 
 }
 // 3. Использовать цикл - чтобы повесить обработчик события на каждую кнопку
-button.forEach(btn =>{
-    btn.addEventListener('click', deleteButton);
-})
+button.forEach(btn => btn.addEventListener('click', deleteButton));
