@@ -16,8 +16,19 @@ buttonFoo.addEventListener('click',(clickButtonFoo));
 
 const buttonAll = document.querySelectorAll('.btn');
 console.log(buttonAll)
-const clickButtonSex = () => {
-    return console.log('Кликай на меня долго');
+const clickButtonSex = function (event)  {
+    console.log('Кликай на меня долго');
+    console.log(event.target.dataset)
+    console.log(event.target)
+    console.log(event.currentTarget)
+    console.log (event.target === event.currentTarget)
+    // event.stopPropagation()
+    console.log(this)
 }
 // buttonAll.forEach((button) => {button.addEventListener('click',(clickButtonSex))});
 buttonAll.forEach(b => b.addEventListener('click',clickButtonSex));
+window.addEventListener('click', ((event)=>{
+    console.log('Window click', event.target)
+    event.stopPropagation()
+
+}), {capture: true});
