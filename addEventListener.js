@@ -19,4 +19,5 @@ console.log(buttonAll)
 const clickButtonSex = () => {
     return console.log('Кликай на меня долго');
 }
-buttonAll.forEach((button) => {button.addEventListener('click',(clickButtonSex))});
+// buttonAll.forEach((button) => {button.addEventListener('click',(clickButtonSex))});
+buttonAll.forEach(b => b.addEventListener('click',clickButtonSex));
