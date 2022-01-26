@@ -3,7 +3,7 @@ const newDiv = document.createElement('div');
 // Добавить к нему класс wrapper
  newDiv.classList.add('wrapper');
 // Поместить его внутрь тэга body
-const body = document.body.appendChild(newDiv);
+document.body.appendChild(newDiv);
 // Создать заголовок H1 "DOM (Document Object Model)"
 const header = document.createElement('h1');
 header.textContent = 'DOM (Document Object Model)';
