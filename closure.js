@@ -12,7 +12,7 @@ const externalFunction = function (name){
 }
 
     const callInternalFunction = externalFunction('Taras');
-    callInternalFunction()
+    callInternalFunction();
 
 function helloPlayers (name) {
     const lastName = `Bay ${name}`;
@@ -32,20 +32,20 @@ function nameDurak (name) {
     let durak = ', извините, но Вы дурак';
    return function () {
 
-        return `${name + durak} `
+        return `${name + durak} `;
     }
 }
-const newDurak = nameDurak('Taras Vasilievich')
-newDurak()
+const newDurak = nameDurak('Taras Vasilievich');
+newDurak();
 
 function stepCounter (firstName) {
     let start = 0;
     return function () {
         start++;
-        return `${firstName} сделал ${start} шагов`
+        return `${firstName} сделал ${start} шагов`;
     }
 }
-const playerTwo = stepCounter('Taras')
-const playerFoo = stepCounter('Sacha')
+const playerTwo = stepCounter('Taras');
+const playerFoo = stepCounter('Sacha');
 playerFoo();
 playerTwo();
