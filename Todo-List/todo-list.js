@@ -4,14 +4,15 @@ const addTasksList = document.querySelector('.add-tasks-form');
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 const removeTasks = document.querySelector('.remove-tasks');
 removeTasks.addEventListener('click', deleteTasksAll);
-const deleteBtn = document.querySelector('.delete-btn');
-// deleteBtn.addEventListener('click', deleteTasks);
-// function deleteTasks (e) {
+// const deleteBtn = document.querySelector('.delete-btn');
 //
-//   const delTask = e.target
-//   console.log(delTask)
+// function deleteTasks (e) {
+//     const newTask = e.currentTarget;
+//     if(newTask === null) {return newTask.closest('.tasks-list').remove()};
 //
 // }
+// deleteBtn.addEventListener('click', deleteTasks);
+// console.log({deleteBtn})
 function deleteTasksAll (tasks) {
     localStorage.clear();
     tasks = [];
@@ -31,7 +32,7 @@ function addTasks (e) {
 }
 function displayTasks (tasks, tasksList) {
     tasksList.innerHTML = tasks.map((task, index) => {
-        return `<li><input type='checkbox' id='item${index}' data-index='${index}' ${task.checked ? 'checked' : ''}/>
+        return `<li class="new-task"><input type='checkbox' id='item${index}' data-index='${index}' ${task.checked ? 'checked' : ''}/>
           <label for='item${index}'>${task.text}</label><button class="delete-btn">Х</button>
           </li>`
     }).join('');
