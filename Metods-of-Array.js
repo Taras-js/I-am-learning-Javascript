@@ -1,0 +1,1 @@
+// map, reduce, sort, filter, forEach
