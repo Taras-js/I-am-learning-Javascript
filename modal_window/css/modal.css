@@ -1,0 +1,22 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .2);
+}
+
+.modal-window {
+    width: 600px;
+    border-radius: 5px;
+    background: #fff;
+    margin: 100px auto;
+    /*    temp */
+    height: 200px;
+}
+
+.modal-header {
+    padding: 5px 10px;
+
+}
