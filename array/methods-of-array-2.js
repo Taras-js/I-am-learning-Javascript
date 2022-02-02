@@ -1,18 +1,18 @@
 // ## Основные Методы Массивов - 2
 
 const people = [
-    { name: 'Станислав', year: 2000 },
-    { name: 'Василий', year: 1986 },
-    { name: 'Александр', year: 1990 },
-    { name: 'Владимир', year: 2004 },
+    {name: 'Станислав', year: 2000},
+    {name: 'Василий', year: 1986},
+    {name: 'Александр', year: 1990},
+    {name: 'Владимир', year: 2004},
 ];
 
 const comments = [
-    { text: 'Отличный пост!', id: 523423 },
-    { text: 'Мне нравится', id: 823423 },
-    { text: 'Продолжай в том же духе', id: 2039842 },
-    { text: 'Все аццццтой !!!!!', id: 123523 },
-    { text: 'Нормально', id: 542328 }
+    {text: 'Отличный пост!', id: 523423},
+    {text: 'Мне нравится', id: 823423},
+    {text: 'Продолжай в том же духе', id: 2039842},
+    {text: 'Все аццццтой !!!!!', id: 123523},
+    {text: 'Нормально', id: 542328}
 ];
 
 //## Методы Some и Every
@@ -50,7 +50,7 @@ console.log({commentIndexId})
 
 // slice() создает новый массив, куда копирует елементы начиная с индекса старт и до end (не включая end)
 // используем оператор spread для копирования всех элементов первого и воторого массива в новый массив newComments:
-const finalArray1 = comments.slice(0,commentIndexId)
+const finalArray1 = comments.slice(0, commentIndexId)
 const finalArray2 = comments.slice(commentIndexId + 1)
 const finalArray = [...finalArray1, ...finalArray2]
 console.log({finalArray1, finalArray2, finalArray, comments})

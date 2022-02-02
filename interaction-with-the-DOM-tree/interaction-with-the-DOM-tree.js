@@ -1,7 +1,7 @@
 // Создать div
 const newDiv = document.createElement('div');
 // Добавить к нему класс wrapper
- newDiv.classList.add('wrapper');
+newDiv.classList.add('wrapper');
 // Поместить его внутрь тэга body
 document.body.appendChild(newDiv);
 // Создать заголовок H1 "DOM (Document Object Model)"
@@ -70,10 +70,11 @@ const carsList = [
     {brand: 'Lexus', year: 2016, color: 'Серебристый'},
     {brand: 'Nissan', year: 2012, color: 'Черный'},
 ]
-function generateAutoCard (brand, year, color) {
+
+function generateAutoCard(brand, year, color) {
     const currentData = new Date();
     const currentYear = currentData.getFullYear();
-        return ` 
+    return ` 
     <div class="autoCard">
         <h2>BRAND YEAR</h2>
             <p>Автомобиль ${brand} - ${year} года - цвет ${color}. 
@@ -81,6 +82,7 @@ function generateAutoCard (brand, year, color) {
             <button class='btn'>Удалить</button>
     </div>`
 }
+
 // Поместить эти 3 карточки внутрь DIV с классом autos
 const innerAutos = carsList.map(car => {
     return generateAutoCard(car.brand, car.year, car.color);
@@ -93,11 +95,13 @@ newDiv.insertAdjacentElement('beforebegin', autos)
 // При клике на кнопку - удалять карточку из структуры DOM
 // 1. Выбрать все кнопки
 const button = document.querySelectorAll('.btn');
+
 // 2. Создать функцию удаления
-function deleteButton (e) {
+function deleteButton(e) {
     const currentButton = e.currentTarget;
     return currentButton.closest('.autoCard').remove();
 
 }
+
 // 3. Использовать цикл - чтобы повесить обработчик события на каждую кнопку
 button.forEach(btn => btn.addEventListener('click', deleteButton));

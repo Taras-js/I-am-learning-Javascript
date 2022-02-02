@@ -6,22 +6,27 @@ const car = {
 const details = `Автомобиль ${car.name} выпущен с завода в ${car.year} году`;
 console.log(details)
 const newHtml = `<div>${car.name}</div> <div>${car.year}</div>`;
-document.body.innerHTML= newHtml;
+document.body.innerHTML = newHtml;
 console.log(newHtml)
 const cars = [
-    {   name: 'Tesla',
+    {
+        name: 'Tesla',
         year: 2019
     },
-    {   name: 'Lada',
+    {
+        name: 'Lada',
         year: 2010
     },
-    {   name: 'Lada',
+    {
+        name: 'Lada',
         year: 2010
     },
-    {   name: 'Lada',
+    {
+        name: 'Lada',
         year: 2010
     },
-    {   name: 'Lada',
+    {
+        name: 'Lada',
         year: 2010
     }
 ]
@@ -38,7 +43,7 @@ const car = {
     info: ['electric', 'modern', 'functional']
 };
 const infoAdd = (infos) => {
-    return`
+    return `
 <div>
     ${infos.map(info => `<div>${info}</div>`).join(' ')}
 </div>
@@ -48,7 +53,7 @@ const newHtml = `
 <ul>
 ${car.name ? `<p>${car.name}</p>` : ''}
 
-${car.year ? `<p>${car.year}</p>`: ''}
+${car.year ? `<p>${car.year}</p>` : ''}
 <p>${infoAdd(car.info)}</p>
 </ul>
 `;

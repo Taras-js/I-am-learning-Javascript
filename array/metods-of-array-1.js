@@ -4,19 +4,19 @@
 // Наши данные
 
 const presidents = [
-    { first: 'George', last: 'Washington', born: 1732, died: 1799 },
-    { first: 'John', last: 'Adams', born: 1735, died: 1826 },
-    { first: 'Ronald', last: 'Reagan', born: 1911, died: 2004 },
-    { first: 'Gerald', last: 'Ford', born: 1913, died: 2006 },
-    { first: 'Richard', last: 'Nixon', born: 1913, died: 1994 },
-    { first: 'John F.', last: 'Kennedy', born: 1917, died: 1963 },
-    { first: 'Harry S.', last: 'Truman', born: 1884, died: 1972 },
-    { first: 'Grover', last: 'Cleveland', born: 1837, died: 1908 },
-    { first: 'Chester A.', last: 'Arthur', born: 1829, died: 1886 },
-    { first: 'Abraham', last: 'Lincoln', born: 1809, died: 1865 },
-    { first: 'Franklin', last: 'Pierce', born: 1804, died: 1869 },
-    { first: 'Lyndon B.', last: 'Johnson', born: 1908, died: 1973 },
-    { first: 'Dwight D.', last: 'Eisenhower', born: 1890, died: 1969 },
+    {first: 'George', last: 'Washington', born: 1732, died: 1799},
+    {first: 'John', last: 'Adams', born: 1735, died: 1826},
+    {first: 'Ronald', last: 'Reagan', born: 1911, died: 2004},
+    {first: 'Gerald', last: 'Ford', born: 1913, died: 2006},
+    {first: 'Richard', last: 'Nixon', born: 1913, died: 1994},
+    {first: 'John F.', last: 'Kennedy', born: 1917, died: 1963},
+    {first: 'Harry S.', last: 'Truman', born: 1884, died: 1972},
+    {first: 'Grover', last: 'Cleveland', born: 1837, died: 1908},
+    {first: 'Chester A.', last: 'Arthur', born: 1829, died: 1886},
+    {first: 'Abraham', last: 'Lincoln', born: 1809, died: 1865},
+    {first: 'Franklin', last: 'Pierce', born: 1804, died: 1869},
+    {first: 'Lyndon B.', last: 'Johnson', born: 1908, died: 1973},
+    {first: 'Dwight D.', last: 'Eisenhower', born: 1890, died: 1969},
 ];
 
 
@@ -28,7 +28,6 @@ const writers = ['Василий, Жуковский', 'Александр, Гр
     'Алексей, Писемский', 'Дмитрий, Григорович', 'Яков, Полонский', 'Леонид, Андреев',
     'Валерий, Брюсов', 'Саша, Черный', 'Юрий, Трифонов', 'Федор, Абрамов',
     'Дмитрий, Кедрин', 'Василий, Шукшин'];
-
 
 
 // Array.prototype.filter()
@@ -53,36 +52,36 @@ const diedPresidents = presidents.map(president => `${president.last} умер �
 // console.table(diedPresidents)
 // Array.prototype.sort()
 // 3. Отсортировать президентов по году рождения - от старшего к младшему
-const sortPresidents = presidents.sort((a,b) =>{
-    if(a.born > b.born){
+const sortPresidents = presidents.sort((a, b) => {
+    if (a.born > b.born) {
         return 1;
     } else {
         return -1;
     }
 })
 // console.table(sortPresidents)
-const junior = presidents.sort((a,b) => {
-    if(a.born < b.born) {
+const junior = presidents.sort((a, b) => {
+    if (a.born < b.born) {
         return 1;
     } else {
         return -1;
     }
 })
 // console.table(junior)
-const died = presidents.sort((a,b) => {
+const died = presidents.sort((a, b) => {
     if (a.died > b.died) {
         return 1;
     } else {
         return -1;
     }
 })
-const died1 = presidents.sort((a,b) => (a.died > b.died) ? 1 : -1);
+const died1 = presidents.sort((a, b) => (a.died > b.died) ? 1 : -1);
 // console.table(died1)
-const died2 = presidents.sort((a,b) => (a.died < b.died) ? 1 : -1);
+const died2 = presidents.sort((a, b) => (a.died < b.died) ? 1 : -1);
 // console.table(died2)
 // Array.prototype.reduce()
 // 4. Подсчитать общее количество лет жизни всех президентов
-const presidentsAll = presidents.reduce((total,president) => {
+const presidentsAll = presidents.reduce((total, president) => {
     return total + (president.died - president.born);
 }, 0)
 // console.log(presidentsAll)
@@ -90,19 +89,20 @@ const presidentSort = presidents.reduce((total, president) => total + (president
 // console.log(presidentSort)
 
 
-
 // 5. Отсортировать президентов в зависимости от количества прожитых лет (от большего к меньшему)
-const presidentsSorted = presidents.sort((a,b) => {
+const presidentsSorted = presidents.sort((a, b) => {
     const presidentA = a.died - a.born;
     const presidentB = b.died - b.born;
-    if(presidentA > presidentB) {
+    if (presidentA > presidentB) {
         return -1;
     } else {
         return 1;
     }
 })
 // console.table(presidentsSorted)
-const presidentsSorted2 = presidents.sort((a,b) => {(a.died - a.born) > (b.died - b.born) ? -1 : 1});
+const presidentsSorted2 = presidents.sort((a, b) => {
+    (a.died - a.born) > (b.died - b.born) ? -1 : 1
+});
 // console.table(presidentsSorted2)
 
 // 6. Создать список названий городов (City) и областей (County) Калифорнии содержащих "San"
@@ -116,13 +116,12 @@ const presidentsSorted2 = presidents.sort((a,b) => {(a.died - a.born) > (b.died 
 // console.log({ulCity})
 
 
-
 // 7. Упражнение по сортировке
 // Отсортировать массив "writers" по фамилии в алфавитном порядке
-const sortArray = writers.sort((writerA,writerB) =>{
+const sortArray = writers.sort((writerA, writerB) => {
     const [firstA, lastA] = writerA.split(', ');
     const [firstB, lastB] = writerB.split(', ');
-    return `${lastA > lastB ? 1 : -1 }`
+    return `${lastA > lastB ? 1 : -1}`
 })
 // console.table(sortArray)
 
@@ -132,7 +131,7 @@ const sortArray = writers.sort((writerA,writerB) =>{
 const data = ['truck', 'car', 'car', 'truck', 'bike', 'walk', 'car', 'van', 'bike',
     'walk', 'car', 'van', 'car', 'truck'];
 const whotData = data.reduce((total, whot) => {
-    if(!total[whot]) {
+    if (!total[whot]) {
         total[whot] = 0;
     }
     total[whot]++;
@@ -140,8 +139,6 @@ const whotData = data.reduce((total, whot) => {
 
 }, {})
 // console.log(whotData)
-
-
 
 
 // 9. Упражнение по использованию методов .foEach и Object.keys();

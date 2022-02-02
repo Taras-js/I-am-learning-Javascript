@@ -1,5 +1,6 @@
 declarationFunction();
-function declarationFunction () {
+
+function declarationFunction() {
     console.log('Ой, ёёёёёёёёёёёёёёёёёёёё')
 }
 

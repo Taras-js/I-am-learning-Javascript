@@ -10,10 +10,10 @@
 //arrayStudents.pop()// удаляет элемент в конце
 //console.log(arrayStudents)
 //const helloStudents = arrayStudents.map(function( student){
- //   console.log('студент =', student)
+//   console.log('студент =', student)
 //    return `Welcome ${student}`;
 //})// перебирает все элементы массива
-    //console.log(helloStudents)
+//console.log(helloStudents)
 // function declarationAdd  (num1, num2)  {
 //     let some = num1 + num2;
 //     return some;
@@ -121,7 +121,7 @@ products.push('морковь');
 const products = ['сыр', 'грибы', 'ветчина', 'помидор'];
 
 function logIngredients(ingredient, index) {
-    if (index === (products.length -1)) {
+    if (index === (products.length - 1)) {
         console.log(ingredient, index);
     }
 
@@ -137,14 +137,14 @@ h2.style.color = 'blue';
 
 // DOM Изображение
 const myPic = document.querySelector('.myPic');
-myPic.addEventListener('click', function() {
+myPic.addEventListener('click', function () {
     myPic.classList.toggle('circle');
 })
 
 // Асинхронность
 function makeBurger() {
-    const burgerPromise = new Promise(function(resolve, reject) {
-        setTimeout(function() {
+    const burgerPromise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
             // Бургер готов
             resolve('Ваш бургер готов!')
         }, 2000)
@@ -157,9 +157,9 @@ const burger = makeBurger();
 const burger2 = makeBurger();
 console.log(burger)
 
-burger.then(function(myBurger) {
+burger.then(function (myBurger) {
     console.log('my burger 1> ', myBurger)
 })
-burger2.then(function(myBurger) {
+burger2.then(function (myBurger) {
     console.log('my burger 2> ', myBurger)
 })

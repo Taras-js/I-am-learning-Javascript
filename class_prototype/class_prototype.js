@@ -1,16 +1,16 @@
-
-function Cars3 (brand, color) {
+function Cars3(brand, color) {
     this.brand = brand;
     this.color = color;
 }
+
 const car = new Cars3('Range Rover', 'black');
-const car2 = new Cars3 ('Nissan', 'white');
+const car2 = new Cars3('Nissan', 'white');
 // console.log(car, car2)
 Cars3.prototype.start = function () {
-    console.log(`${this.brand} стартовать` )
+    console.log(`${this.brand} стартовать`)
 };
 const Cars2 = class {
-  //  вариант синтаксиса класса
+    //  вариант синтаксиса класса
 
 }
 

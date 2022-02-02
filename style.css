@@ -1,78 +1,79 @@
 html {
-  box-sizing: border-box;
-  background: url('/Img/car.jpg') center no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background: url('/Img/car.jpg') center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 .wrapper {
-  padding: 20px;
-  max-width: 420px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  text-align: center;
-  margin: 0;
-  font-weight: 200;
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
 }
 
 .tasks-list {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
 }
 
 .tasks-list li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-  font-weight: 100;
-  display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
 }
 
 .tasks-list label {
-  flex: 1;
-  cursor: pointer;
-  line-height: 1.2;
+    flex: 1;
+    cursor: pointer;
+    line-height: 1.2;
 }
 
 .tasks-list input {
-  display: none;
+    display: none;
 }
 
 .tasks-list input + label:before {
-  content: '⬜️';
-  margin-right: 10px;
+    content: '⬜️';
+    margin-right: 10px;
 }
 
 .tasks-list input:checked + label:before {
-  content: url('Img/check.png');
+    content: url('Img/check.png');
 }
 
 .add-tasks {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .add-tasks input {
-  padding: 10px;
-  outline: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .remove-tasks {
-  margin-top: 10px;
-  padding: 10px;
-  color: brown;
+    margin-top: 10px;
+    padding: 10px;
+    color: brown;
 }

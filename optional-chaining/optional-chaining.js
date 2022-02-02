@@ -1,4 +1,3 @@
-
 const cars = {
     brand: 'bmw',
     // color: 'red',
@@ -8,14 +7,16 @@ const cars = {
     }
 };
 const car = document.querySelector('.car')
-function addCars () {
-        const auto = [cars]
+
+function addCars() {
+    const auto = [cars]
     auto?.forEach(car => {
-        console.log( ` Машина ${car?.brand} 
+        console.log(` Машина ${car?.brand} 
             Цвет ${car?.color} 
             // Спецификация коробки переключения передач ${car.specified?.kpp} 
 `)
     })
 
 }
+
 addCars()

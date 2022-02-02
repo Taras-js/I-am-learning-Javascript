@@ -1,4 +1,3 @@
-
 const tasksList = document.querySelector('.tasks-list');
 const addTasksList = document.querySelector('.add-tasks-form');
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -13,12 +12,13 @@ removeTasks.addEventListener('click', deleteTasksAll);
 // }
 // deleteBtn.addEventListener('click', deleteTasks);
 // console.log({deleteBtn})
-function deleteTasksAll (tasks) {
+function deleteTasksAll(tasks) {
     localStorage.clear();
     tasks = [];
     return displayTasks(tasks, tasksList);
 }
-function addTasks (e) {
+
+function addTasks(e) {
     e.preventDefault()
     const text = e.target.item.value;
     const item = {
@@ -30,14 +30,16 @@ function addTasks (e) {
     displayTasks(tasks, tasksList)
     this.reset()
 }
-function displayTasks (tasks, tasksList) {
+
+function displayTasks(tasks, tasksList) {
     tasksList.innerHTML = tasks.map((task, index) => {
         return `<li class="new-task"><input type='checkbox' id='item${index}' data-index='${index}' ${task.checked ? 'checked' : ''}/>
           <label for='item${index}'>${task.text}</label><button class="delete-btn">Х</button>
           </li>`
     }).join('');
 }
-function toggleClick (e) {
+
+function toggleClick(e) {
     if (!e.target.matches('input')) return;
 
     const element = e.target.dataset.index;
@@ -45,6 +47,7 @@ function toggleClick (e) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
     displayTasks(tasks, tasksList);
 }
+
 tasksList.addEventListener('click', toggleClick);
 addTasksList.addEventListener('submit', addTasks);
 displayTasks(tasks, tasksList);
