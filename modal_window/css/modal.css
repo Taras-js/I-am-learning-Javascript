@@ -1,22 +1,68 @@
+.modal {}
+.modal.open .modal-window,
+.modal.open .modal-overlay {
+    opacity: 1;
+    z-index: 1000;
+}
+.modal.open .modal-window {
+    transform: translateY(100px);
+}
+.modal.open .modal-overlay {
+    background: rgba(0, 0, 0, .5);
+}
+.modal-overlay, .modal-window {
+    opacity: 0;
+    z-index: -1;
+}
 .modal-overlay {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, 0);
+    transition: backround 2s ease-in;
 }
 
 .modal-window {
     width: 600px;
     border-radius: 5px;
     background: #fff;
-    margin: 100px auto;
-    /*    temp */
-    height: 200px;
+    margin: 0 auto;
+    transform: translateY(-550px);
+    transition: transform 1s ease-in;
 }
 
 .modal-header {
     padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+/*выравнивание содержимого флекс-контейнера по правому и левому краю*/
 
+}
+.modal-title {
+    font-size: 2rem;
+
+
+}
+.modal-close {
+    cursor: pointer;
+}
+.modal-body {
+
+    padding: 10px;
+}
+.modal-body p {
+    margin: 0 0 10px 10px;
+    /*padding: 0 0 4px 0;*/
+}
+.modal-footer {
+    display: flex;
+    justify-content: right;
+    padding: 10px 10px;
+    border-top: 2px solid #eee;
+}
+.modal-footer button {
+    margin: 5px;
+    cursor: pointer;
 }
