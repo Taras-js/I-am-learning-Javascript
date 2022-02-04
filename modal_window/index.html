@@ -9,13 +9,28 @@
 <div class="container">
     <h1>Создание модального окна на JS</h1>
     <p> Lorem100 </p>
-    <label for="open-button"> Run modal window </label>
-    <button class="open-button" id="open-button" data-open="data-open"> RUN </button>
-</div>
 
+</div>
+<div class="container-button">
+    <ul>
+        <li>
+            <label for="open-button"> Run modal window </label>
+            <button class="open-button" id="open-button" data-open="data-open"> RUN </button>
+        </li>
+        <li>
+            <label for="delete-modal"> Delete modal window </label>
+            <button class="delete-modal" id="delete-modal" data-delete="true"> DELETE </button>
+        </li>
+        <li>
+            <label for="create-modal"> Delete modal window </label>
+            <button class="create-modal" id="create-modal" data-create="true"> CREATE MODAL WINDOW IN DOM-TREE </button>
+        </li>
+    </ul>
+</div>
 
 <script src="base.js"></script>
 <script src="plugins/modal.js "></script>
+<script src="plugins/promise.js"></script>
 <script src="index.js"></script>
 
 </body>

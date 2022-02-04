@@ -2,30 +2,20 @@ function _createModal (options) {
     const modal = document.createElement('div');
     modal.classList.add('modal');
     modal.innerHTML = `
-    
     <div class="modal-overlay">
         <div class="modal-window">
             <div class="modal-header">
-                <span class="modal-title"> Title modal window for Javascript </span>
+                <span class="modal-title"> ${options.title || ''} </span>
                 <span class="modal-close" data-close="data-close" autofocus>&times;</span>
             </div>
             <div class="modal-body">
-                <p>Информация о товаре: В соответствии с ним организовано рассмотрение на заседаниях кафедр военной педагогики и психологии и гуманитарных и социальных наук вопросов:
-                    - о включении в рабочую программу дисциплины «Организационные и правовые основы высшего профессионального образования» вопросов, связанных с изучением  нормативно-правовых актов Федеральной службы войск национальной гвардии в области высшего образования;
-                </p>
-                <p>Информация о порядке приобретения товара: 1.Слабое знание адъюнктами нормативно-правовых актов, в том числе приказов Федеральной службы войск национальной гвардии Российской Федерации, регламентирующих образовательную и научную деятельность.
-                    2.В ответах на вопросы экзаменационных билетов адъюнктов не в достаточной мере показали связь теоретических положений с практикой будущей преподавательской деятельности и примерами из личного служебного опыта.
-                    3.Формулировка ряда вопросов выносимых на государственный экзамен, имеет двусмысленное толкование и не в полном объеме отражает содержание целевой установки, заявленной в программе государственной итоговой аттестации.
-                    4.Отдельные научно-квалификационные работы (диссертации) оформляются с нарушением требований государственного стандарта .
-                    5.В текстах научных докладов и выступлениях адъюнктов недостаточно полно представлена практическая значимость исследований для деятельности войск национальной гвардии Российской Федерации и образовательной деятельности ВООВО.
-                    6.В отдельных научных докладах недостаточно четко определены критерии и показатели оценки полученных результатов исследований.
-                </p>
+                <p> ${options.parameterOne || ''} </p>
+                <p> ${options.parameterTwo || ''} </p>
             </div>
             <div class="modal-footer">
-                <button class="modal-ok"> Ok </button>
-                <button class="modal-cancel"> Cancel </button>
+                <button class="modal-ok" data-close="data-close"> Ok </button>
+                <button class="modal-cancel" data-close="data-close"> Cancel </button>
             </div>
-
         </div>
     </div>
 
@@ -44,34 +34,40 @@ $.modal = function(options) {
         closeSpan.addEventListener('click', event => {
             event.currentTarget.dataset.close ? modal.close() : !closing
         })
+    const okButton = document.querySelector('.modal-ok');
+        okButton.addEventListener('click', event => {
+            event.currentTarget.dataset.close ? modal.close() : !closing
+
+        })
+        const listener = event => {event.currentTarget.dataset.close && modal.close()};
+        const cancelButton = document.querySelector('.modal-cancel');
+        cancelButton.addEventListener('click', listener)
+        const deleteModal = document.querySelector('.delete-modal');
+        deleteModal.addEventListener('click', event =>{
+            if(event.currentTarget.dataset.delete) {
+                return modal.destroy()
+            }
+        });
+        const createModalWindow = document.querySelector('.create-modal');
+        createModalWindow.addEventListener('click', event =>{
+            event.currentTarget.dataset.create && modal.onOpen()
+        })
     return {
 
         open() {
-            runModal.classList.add('open')
+            runModal.classList.add('open');
         },
         close() {
             closing = true;
             runModal.classList.remove('open');
-            closing = false;
         },
         destroy() {
-
+            runModal.parentNode.removeChild(runModal);
+            // cancelButton.removeEventListener('click', listener);
         },
         onOpen() {
-            return runModal.classList.add('open')
+            if (runModal) {_createModal(options)}
         }
     }
 }
-// <div data-close='true'></div> // Пример как слушать события
-// const _modal = _createModal(options);
-// $modal.addEventListener('click', event => {
-//     console.log('Clicked', event.target.dataset.close)
-// })
-// _modalParentMode.removeChild(_modal) // пример как удалять элементы в дом дереве
-//
-// const listener = event => {
-//     if (event.target.dataset.close) {
-//         modal.close()
-//     }
-// }
-// _modal.removeEventListener('click', listener)// так удалять слушателей
+
