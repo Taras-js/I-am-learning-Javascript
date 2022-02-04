@@ -15,10 +15,11 @@ coffeePromise
             function generateCoffeeCard(title, description) {
                 return ` 
                     <div class="coffee">
-                            <h2>Coffee</h2>
-                            <p> Coffee: ${title} </p>
-                            <p> ${description} </p>
-                            <button class='btn' data-del="true">Удалить</button>
+                            <h2 class="item-1">Coffee: ${title} </h2>
+                            <p class="item-2"> ${description} </p>
+                            <div class='item-3'>
+                            <button class='btn-see' data-see="true">Ingridients</button>
+                            <button class='btn' data-del="true">Delete</button></div>
                     </div>`
             }
         }

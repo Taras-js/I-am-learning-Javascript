@@ -1,3 +1,11 @@
+body {
+    background: #1f308762;
+    background-size: 20rem 100%;
+    position: absolute;
+    height: max-content;
+    padding: 10px 10px 10px 10px;
+    margin: 0 auto;
+}
 .modal {}
 .modal.open .modal-window,
 .modal.open .modal-overlay {
@@ -73,4 +81,50 @@ margin: 0 0 10px 0;
 .container-button button {
     cursor: pointer;
 
+}
+.all-coffee {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+
+}
+.coffee {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    background-color: #e3dadafa;
+
+    margin: 0 10px 10px 0;
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items: self-end;
+}
+.item-1 {
+    align-self: start;
+    justify-self: center;
+}
+.item-2 {
+    align-self: start;
+    justify-self: stretch;
+    margin: 0 20px 0 20px;
+
+
+}
+.item-3 {
+    display: flex;
+    justify-content: end;
+    margin: 0 0 0 0;
+
+
+}
+.btn, .btn-see, .create-modal, .delete-modal, .open-button{
+    /*align-self: end;*/
+    background: #e86161fa;
+    font-size: 16px;
+    color: black;
+    border-color: black;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
 }
