@@ -1,0 +1,794 @@
+@import "reset.css";
+
+* {
+
+    color: red;
+}
+
+#example {
+
+
+}
+
+a[href^="htttp:123"] {
+    background-color: aqua;
+}
+
+/*стилизует ссылки по названию с начала*/
+a[href$=".jpg"] {
+    background-color: white;
+}
+
+/*стилизует ссылку по названию с конца*/
+div p span {
+
+}
+
+/*вложенность селекторов*/
+
+ul li > span {
+    font-weight: bold;
+}
+
+/*селектор прямого потомка*/
+ul li + li {
+
+}
+
+/*!*следующий потомок  или ближайший селектор*! все последующие после первого в списке*/
+br ~ p {
+    font-size: 30px;
+}
+
+/*стилизация после указанного*/
+a[target] {
+
+}
+
+/*стилизация по аттрибутам*/
+a[target="blznk"] {
+
+}
+
+/*стилизация по аттрибутам*/
+a[href*="link"] {
+    background: crimson;
+
+}
+
+/*строка проверяется на наличие указанных символов*/
+/*Самые распространенные селекторы класса групповой и селектор потомка*/
+/*Псевдоэлементы и псевдоклассы*/
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+
+}
+
+/*по наведению*/
+a:visited {
+
+}
+
+/*посещенная ссылка*/
+a:active {
+
+}
+
+/*применяется в момент кратковременного щелчка на ссылку применяется для любых активных элементов*/
+a:focus {
+
+}
+
+/*добавляется на элемент при перемещении с помощью TAB*/
+p::first-letter {
+
+}
+
+/*стилизация первой буквы*/
+p::first-line {
+
+}
+
+/*стилизация первой строки*/
+p::selection {
+
+}
+
+/*стилизация выделения текста*/
+h1::before {
+    content: "this is";
+}
+
+h1::after {
+    content: "channel";
+/ / специальное свойство
+}
+
+/*часто применяются - они отдельные созданные черех css*/
+.list li:first-child {
+
+}
+
+.list li:last-child {
+
+}
+
+.list li:nth-child(even) {
+
+
+}
+
+/*покраска четное элемента в списке или таблице*/
+/*можно передавать цифры для конкретных строк*/
+/*2n - применение к каждому второму элементу +1 отсчет начинается от указанного через +*/
+.list li:nth-child(odd) {
+
+
+}
+
+/*покраска нечетное элемента в списке или таблице*/
+.list span:first-of-type {
+
+}
+
+.list span:last-of-type {
+
+}
+
+.list span:nth-of-type(2) {
+
+}
+
+/*окраска элементов и их выбор начало конец и по номеру*/
+.list4 li:not(.item) {
+
+}
+
+/*добавь ко всем элементам кроме класса .item*/
+/*                   element psevdoelement = 1center */
+/*                         class attribute = 10*/
+/*                                      id = 100*/
+/*                            inline style = 1,000*/
+/*Каскадность и наследование*/
+/*!important в обязательном порядке применяет это свойство - на практике лучше не применять*/
+/*Важность - !important*/
+/*Специфичность вес элементов*/
+/*порядок в самих стилях сверху вниз*/
+/*есть свойство которые наследуются или нет*/
+/*наследуются такие как внешний вид текста*/
+/*рамки границы позиционирование*/
+
+/*inherit - наследует свойство от родителя*/
+/*Reset && Normalize - копируются и подключаются к проекту*/
+/*                     Блочная модель и отступы*/
+/*                     строчные - подстраивается под свой размер*/
+/*                     блочные - занимают весь размер экрана*/
+/*                     строчно-блочные*/
+/*                    display: inline; делает блочный элемент строчным*/
+/*                                     margin отступы снаружи*/
+/*                                     padding внутри*/
+/*                                     зеленым - padding*/
+/*оранжевым -*/
+/*синим - контент*/
+/*желтым = border*/
+/*красным - margin*/
+
+
+/*для строчных элементов margin top && bottom не применяются*/
+/*                                     с блочным элементом проблем нет*/
+/*                                     схлопывание margin collapce*/
+/*                                     если элементы находятся рядом то margi между ними равен большему margin*/
+/*                                     для строчных  элементов задание высоты и ширины не применимо*/
+
+/*                                     box-sizing border-box*/
+@font-face {
+    font-family: 'Roboto';
+    src: url(".ttf") format ("truetype")
+url(".woff") format ("woff")
+url(".woff2") format ("woff2")
+url(".otf") format ("opentype")
+font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    color: red;
+    text-decoration: underline overline line-through none;
+    /*снизу сверху  through: перечеркивает; удаление декарации*/
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    /*устанавливает расстояние между словами */
+    line-height: 100px;
+    /*задает межстрочный интервал*/
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: none;
+    text-transform: capitalize;
+    /*все слова с большой буквы*/
+    text-align: center;
+    text-align: end;
+    text-align: right;
+    text-align: left;
+    text-align: justify;
+    /*форматирует текст по ширине*/
+    text-indent: 30px;
+    /*красная строка*/
+}
+
+body {
+    overflow: scroll;
+    overflow-x: ;
+    overflow-y: ;
+    /*hidden, auto, scroll,  - применяются при переполнении элементов */
+    z-index: -1;
+    /*применяется для скрытия окна или порядка их размещения до 999*/
+
+    float: left, right;
+    /*!*обтекание текстом* надо попробовать !!!/*/
+
+
+}
+
+h1 {
+    border: 1px solid red;
+    /*толщина сплошная цвет*/
+    border-width: 30px;
+    border-style: dashed;
+    /*граница прерывистая*/
+    border-style: dotted;
+    /*граница точками*/
+    border-style: double;
+    /*двойная граница*/
+    border-style: groove;
+    border-style: inset;
+    border-style: outset;
+    border-style: ridge;
+    /*игра со светом и с тенями*/
+    border-style: none;
+    border-color: transparent;
+    /*делает границу невидимой но в блочной модели она остается*/
+    border-right: none;
+    border-right-style: none;
+    border-bottom-width: 20px;
+    outline: 10px solid red;
+    /*обводка в блочной модели не учавствует*/
+}
+
+button:focus,
+input:focus {
+    outline: 3px solid aquamarine;
+
+}
+
+/*Тени*/
+h1 {
+    text-shadow: 1px 3px 4px darkred;
+    /*горизонтальное смещение вправо с плюсом.*/
+    /*вертикальное смещение вниз с плюсом.*/
+    /*степень размытия чем больше тем больше размыта.*/
+    /*цвет тени*/
+    box-shadow: 1px 3px 4px darkred;
+    box-shadow: inset 1px 3px 4px darkred;
+    /*вдавдивает тень внутрь*/
+    box-shadow: inset 1px 3px 4px darkred, inset 1px 3px 4px darkred, inset 1px 3px 4px darkred;
+    /*можно добавлять несколько теней*/
+
+}
+
+p {
+    border-radius: 15px;
+    /*чтобы из прямоугольника сделать круг надо взять половину длины стороны*/
+    border-radius: 1px 3px 4px 10px;
+    /*верхний левый угол */
+    /*правый верхний*/
+    /*правый нижний*/
+    /*левый нижний*/
+    border-radius: 20px/40px;
+    /*элипс*/
+    border-bottom-left-radius: 30px;
+    /*применение к конкретному углу*/
+
+}
+
+/*Работа со списками*/
+ul li {
+    /*определение типа маркера*/
+    list-style-type: disc;
+    /*дефолтное значение - черная точка*/
+    list-style-type: circle;
+    /*небольшой круг*/
+    list-style-type: square;
+    /*квадрат*/
+    list-style-type: decimal;
+    /*делает нумерацию*/
+    list-style-type: upper-roman;
+    /*вурхний регистр в букваз*/
+    list-style-type: lower-roman;
+    /*вурхний регистр в букваз*/
+    list-style-type: none;
+    /*отключение маркировки*/
+    list-style-type: decimal-leading-zero;
+    /*нумерация списка цифрами начиная снуля*/
+    /*Позиционирование*/
+    /*управление положением маркеров относительно списка*/
+    list-style-position: outside;
+    /*маркер за пределами границы списка*/
+    list-style-position: inside;
+    /*внутри границы элемента*/
+    list-style-image: url('../logo_litmir.png');
+    /*меняет маркер но не позволяет менять размер и положение значка*/
+    color: red;
+    color: #ffffff;
+    color: rgba(255, 0, 0);
+    color: hsl(0, 100%, 50%);
+    color: rgba(255, 0, 0, 0.9);
+    /*последний аргумент это прозрачность*/
+    color: red;
+    color: red;
+}
+
+/*Вендерные префиксы*/
+.first {
+    display: none;
+    /*полностью убирает элемент из потока документа и не видим для поисковых систем*/
+    /*скрывает интерактивные блоки*/
+    /*декоративные блоки модальные окна*/
+
+}
+
+.second {
+    visibility: hidden;
+    /*оставляет его место в потоке dev tools - виден для поисковых систем*/
+    opacity: 0;
+    /*прозрачность - так не видно*/
+    color: transparent;
+    /*прозрачный цвет*/
+}
+
+/*Вендерные префиксы*/
+/*для работы разных свойств в разных браузерах*/
+h1 {
+    -webkit-opacity: 0.5;
+    /*хром сафари*/
+    -moz-opacity: 0.5;
+    /*мозилла*/
+    -ms-opacity: 0.5;
+    /*IE internet explorer*/
+    -o-opacity: 0.5;
+    /*opera*/
+}
+
+/*Фон множественные фоны фоновые цвета и фоновые изображения*/
+.wrapper {
+    background-color: aquamarine;
+    background-image: url("../logo_litmir.png");
+    background-size: contain;
+    /*трансформирует фон изображения - где его не хватате оно дублируется,
+    сохраняет свои пропорции и подстраивает под ширину или высоту экрана */
+    background-size: cover;
+    /*заставляет ширину и высоту соответствовать ширине и высоте елемента - обрезка области - искажения */
+    background-size: 100px 200px;
+    /*задание жестки значений - заставляет дублировать изображение на всю ширину экрана в ширину и высоту*/
+    background-repeat: no-repeat;
+    отменяет дублирование изображения
+    background-size: 100% auto;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-position: right bottom;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    /*фиксированное размещение изображения*/
+    background: red url("../logo_litmir.png") 50% 50% no-repeat fixed;
+    /*цвет*/
+    /*изображение*/
+    /*позиция*/
+    /*повторение*/
+    /*фиксирование или нет*/
+    background: url("../logo_litmir.png") center no-repeat fixed, url("../logo_litmir.png");
+    /*добавить несколько картинок */
+}
+
+/*Градиенты*/
+/*переход цветов*/
+/*линейный и радиальный*/
+/*плавный переход одного элемента в другой*/
+h1 {
+    background-image: linear-gradient(90deg, black, white);
+    /*угол наклона, начальный цвет, конечный цвет*/
+    background: linear-gradient(90deg, black, white);
+    /*угол наклона, начальный цвет, конечный цвет*/
+    background-image: linear-gradient(to top right, black, white);
+    /*угол наклона, начальный цвет, конечный цвет*/
+    background-image: linear-gradient(to top right, black, transparent);
+    /*угол наклона, начальный цвет, конечный цвет*/
+}
+
+/*Опорные точки*/
+h1 {
+    background: linear-gradient(90deg, red, orange, yellow, green, aqua, blue);
+    /*опорные точки указываются после 3-х основных точек*/
+    background: linear-gradient(90deg, red 10%, orange 50%, yellow 70%, green, aqua, blue);
+    /*более точное распределение в процентах*/
+    background: linear-gradient(90deg, red 25%, orange 25%, orange 50%, yellow 50%, yellow 75%, aqua, blue);
+    /*жесткий переход цветов*/
+    background: repeating-linear-gradient(45deg, red 25px, orange 25px, orange 50px, yellow 50px, yellow 75px);
+    /*зебра или что-то такое*/
+}
+
+/*завершились линейные градиенты*/
+/*Радиальные градиенты*/
+h1 {
+    background: radial-gradient(red, aquamarine);
+    /*минимальное значение радиального градиента*/
+    background: radial-gradient(ellipse, red, aquamarine);
+    /*элипс радиального градиента*/
+    background: radial-gradient(circle, red, aquamarine);
+    /*круг радиального градиента - дефолтное значение*/
+    background: radial-gradient(circle closest-side, red, aquamarine);
+    /*круг - распространение от центра к ближайшему краю - градиент всегда влазит в границы блока*/
+    background: radial-gradient(circle closest-corner, red, aquamarine);
+    /*круг- из центра до ближайшего угла*/
+    background: radial-gradient(circle farthest-side, red, aquamarine);
+    /*круг распространяется от середины до дальней стороны*/
+    background: radial-gradient(circle farthest-corner, red, aquamarine);
+    /*круг распространяется от середины к дальнему углу*/
+    background: radial-gradient(circle, red 80%, aquamarine 20%);
+    /*круг радиального градиента изменение на жесткие параметры*/
+    background: repeating-radial-gradient(circle, red 20px, aquamarine 20px);
+    /*круг радиального градиента - дефолтное значение*/
+}
+
+/*Фильтры на элементы*/
+img {
+    transition: all 1s ease;
+
+
+}
+
+img:hover {
+    filter: blur(2px);
+    /*размытие от 0 полного размытия*/
+    filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.5));
+    /*похоже на тени: горизонт смещение, вертикаль смещение, размытие и цвет*/
+    /*повторение тени с учетом псевдоэлементов*/
+    /*- в отличии от box-schadow который не учитывает доп элементы и не дает тени допэлементам*/
+    /*!*но нет внутренней тени*! множественных теней нет*/
+    filter: grayscale(100%);
+    /*делает изображение черно-белым люесцвечивание от 0 до 100%*/
+    filter: brightness();
+    /*от -50 до 150 яркость*/
+    filter: contrast(150%);
+    /*от -50 до 150 яркость*/
+    filter: hue-rotate(180deg);
+    /*поворотное наложение от 0 до 360 градусов*/
+    filter: invert(100%);
+    /*от 0 до 100 негатив пленки*/
+    filter: saturate(100%);
+    /*насыщенность изображения от 0 до неограниченного*/
+    filter: sepia(100%);
+    /*эффект старины от 0 до 100*/
+    filter: opacity(100%);
+    /*прозрачности аналогичен opacity от 0 до 100*/
+    /*фильтр ссылка*/
+    /*фильтры можно комбинировать*/
+}
+
+/*Трансформация*/
+/*вращение поворот масштабирование наклон */
+/*изменяющийся элемент не затрагивает соседний*/
+/*формирует новый поток*/
+
+img {
+    transition: all 1s ease;
+
+
+}
+
+img:hover {
+    transform: rotate(360deg);
+    /*вращение от -360 до 360*/
+    transform: scale(0.2, 1.2);
+    /*масштабирование от 0 до 1 уменьшает от 1 и выше увеличит*/
+    transform: scaleX(0.2, 1.2);
+    transform: scaleY(0.2, 1.2);
+    overflow: hidden;
+    /*образает все что выходит за границы блока*/
+    /*если его добавить то элемент будет увеличиваться только в пределах блока как лупа*/
+    /*Перемещение*/
+    transform: translate(-50px, -80px);
+    transform: translateX(-80px);
+    transform: translateY(-50px);
+    /*Наклон*/
+    transform: skew(45deg, 21deg);
+    /*3d наклон от 0 до 360 можно и больше*/
+    transform: skewX(45deg, 21deg);
+    transform: skewY(45deg, 21deg);
+    /*Исходная и опорная точка*/
+    /*находится в центра но можно ее менять*/
+    transform-origin: right bottom;
+    transform-origin: 0 0;
+    transform-origin: 50px 30px;
+}
+
+/*Переходы анимация */
+/*ПРОЦЕСС ПЕРЕХОДА ОДНИХ СВОЙСТВ В ДРУГИЕ*/
+.example {
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+
+    transition-duration: 1s, 5s;
+    /*длительность перехода*/
+    transition-property: all;
+    transition-property: transform, background-color;
+    /*теперь можно управлять преходами отдельно*/
+    transition-delay: 0, 500ms;
+    /*длительность задержки перехода*/
+    transition-timing-function: linear;
+    /*распределение скорости перехода easy easy-in easy-out step-start step-end*/
+    /*steps(10, start)*/
+    /*cubic-bezier(0.1, -0.3, 0.2, 0))*/
+    transition: all 1s easy .5s;
+    /*свойства к которым применены переходы. all*/
+    /*длительность*/
+    /*тип анимации*/
+    /*задержка*/
+}
+
+.example:hover {
+    background-color: red;
+    transform: scale(1.2);
+}
+
+/*АНИМАЦИИ*/
+/*разрешает анимировать переход одних свойств в другие потом в третьи и так далее*/
+/*созданную анимацию можно зациклить или продлить*/
+/*ключевые кадры*/
+/* 1 этап определение анимации*/
+/* 2 этап потом применение к элементу*/
+.example {
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    animation-name: myAnimations;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 5;
+    /*описыват сколько раз будет идти анимация*/
+    /*по умолчанию равна 1*/
+    /*infinite - бесконечно*/
+    animation-direction: alternate;
+    /*направление анимации*/
+    /*по умолчанию как описана в myAnimations*/
+    /*можно запустить в другом направлении*/
+    /*каждый нечетный повтор цикла в нормальном направление*/
+    /*четный в обратном направлении*/
+    animation-direction: reverse;
+    /*все поворы анимации в обратном направлении*/
+    animation-direction: alternate-reverse;
+    /*все нечетные повторения в обратном направлении*/
+    /*все четные в нормальном направлении как описано*/
+    animation-direction: normal;
+    /*дефолтное значение вся анимация как описана*/
+    animation-play-state: paused;
+    animation-play-state: running;
+    /*запуск или остановка анимации*/
+    animation-fill-mode: forwards;
+    /*оставить элемент таким как он стал в самом конце анимации*/
+    animation-delay: 3s;
+    /*задержка на начало выполнения анимации*/
+    animation: myAnimation 5s linear infinite;
+
+}
+
+.example:hover {
+
+}
+
+@keyframes myAnimations {
+    from {
+        background-color: aquamarine;
+
+    }
+    50% {
+        background-color: red;
+        transform: scale(1.2);
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+/*описываются кадрами*/
+/*СТИЛИЗАЦИЯ ТАБЛИЦ*/
+
+table,
+table * {
+    border: 3px solid black;
+    max-width: 500px;
+    border-collapse: separate;
+    /*дефолтное значение*/
+    border-collapse: collapse;
+    /*схлопывает две границы*/
+    border-spacing: 10px 50px;
+    /*устанавливает отступы по горизонтали и по вертикали*/
+    caption-side: top;
+    /*управляет положением заголовка таблицы*/
+    caption-side: bottom;
+    /*вниз заголовок таблицы*/
+    text-align: left;
+    text-align: center;
+    text-align: right;
+    /*выравнивание контента*/
+    vertical-align: center;
+    /*выравнивание по вертикали*/
+    empty-cells: hide;
+    /*скрывает пустые ячейки*/
+
+}
+
+.click {
+    pointer-events: none;
+    /*запрещает выделения в таблице*/
+    cursor: pointer;
+    /*в виде руки*/
+    cursor: url('');
+    /*собственный курсор*/
+}
+
+/*Текстовые эффекты*/
+/*Многоколоночные тексты*/
+.example {
+
+    overflow: hidden;
+    /*образает лишнее*/
+    text-overflow: ellipsis;
+    /*в конце показывается многоточие*/
+    text-overflow: clip;
+    /*текст отсекается в конце*/
+    white-space: nowrap;
+    /*если надо только одну строчку а остальное обрезать в конце - не переносить*/
+    word-wrap: break-word;
+    /*какой механизм применить если слово не влазит в одну строку*/
+    /*разделение слова*/
+    word-break: break-all;
+    /*правила переноса*/
+    writing-mode: vertical-rl;
+    /*вертикальность текста*/
+}
+
+.container {
+    column-count: 2;
+    /*сколько колонок нужно для отображения текста*/
+    column-rule: 1px solid black;
+    column-width: 300px;
+    column-gap: 100px;
+    /*расстояние между колонками*/
+}
+
+/*МЕДИАЗАПРОСЫ*/
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media print {
+    body {
+        background-color: red;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    h1 {
+        display: none;
+
+    }
+}
+
+/*добавления в горизонтальном режиме*/
+/*стилизация placeholder*/
+::placeholder {
+    /*Chrome, Firefox, Opera, Safari 10.1+*/
+    color: blue;
+    opacity: 1; /*- Firefox*/
+}
+
+::-ms-input-placeholder {
+    /*edge*/
+    color: blue;
+}
+
+:-ms-input-placeholder {
+    /*IE 10-11*/
+    color: blue;
+}
+
+/*стилизация календарей либо сторонние библиотеки либо создание снуля и задавать логику в JS*/
+/*Браузерный скролл*/
+::-webkit-scrollbar {
+    width: 25px;
+    background: red;
+}
+
+/*помогает стилизировать месо прокрутки*/
+::-webkit-scrollbar-track {
+    border: 5px solid rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+}
+
+/*стилизация подложки*/
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #00ffa1, #00ffff);
+    border-radius: 15px;
+}
+
+/*стилизация своего ползунка*/
+
+/*CSS спрайты*/
+/*наборы картинок*/
+/*объединение картинок на прозрачной подложке*/
+
+button {
+    width: 200px;
+    height: 150px;
+    background-image: url("../logo_litmir.png");
+    background-position: top;
+    /*позиционирование фона кнопки*/
+    background-size: cover;
+    /*растягивается по большей стороне*/
+    text-indent: -9999px;
+    /*скроет текст самой кнопки*/
+    border: none;
+    /*отключает обводку кнопки*/
+    background-color: transparent;
+    /*делает цвет кнопки прозрачным*/
+    cursor: pointer;
+    /*вместо курсора рука*/
+    outline: grey;
+    /*изменение основного цвета обводки*/
+}
+
+/*наведение*/
+button:hover {
+    background-position: center;
+}
+
+/*нажатие*/
+button:active {
+    background-position: bottom;
+}
+
+header {
+    display: grid;
+    grid-template-areas: " header header header header header"
+                   "main main main main main"
+                   "footer footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}

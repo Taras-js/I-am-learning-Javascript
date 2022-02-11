@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    установка кодировки документа-->
+    <meta name="description" content="html test interesennt">
+    <meta name="keywords" content="html test interesennt">
+    <meta name="author" content="Taras Shevchenko">
+    <!--    SEO-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--    user-scalable=no -->
+    <!--    MOBILE-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    EDGE IE-->
+    <link rel="shortcut icon" href="ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="image/x-icon">
+    <!--    icon.ico-->
+    <link rel="stylesheet" href="https://fonts//gooole.........." type="image/x-icon">
+    <title>HTML_5</title>
+</head>
+<body>
+<!--[if IE]-->
+<!--<h1>Hello world</h1>-->
+<!--[endif]-->
+<!--[if lt IE 10] <h1>Hello world</h1> [endif]-->
+<h1 id="started">Hello world</h1>
+<img src="fonts.png" alt="Fonts if google" height="400px">
+<p> W3C -ВАЛИДАТОР - ВАЛИДАЦИЯ </p>
+<p> ВСЕ ЭЛЕМЕНТЫ ДЕЛЯТСЯ НА СТРОЧНЫЙ ЭЛЕМЕНТЫ </p>
+<div> BLOCK ELEMENT - DIV</div>
+<span> inline element - SPAN </span>
+<header> ШАПКА САЙТА - HEADER</header>
+<nav> НАВИГАЦИЯ - NAV</nav>
+<article> НОВОСТНОЙ БЛОК</article>
+<footer> ПОДВАЛ САЙТА</footer>
+<p> СЕМАНТИКА - ТЕГ КОТОРЫЙ НОСИТ СМЫСЛОВОЕ НАЗНАЧЕНИЕ </p>
+<p>ДОСТУПНОСТЬ EXIXIBILITI</p>
+<h1> window - самый высоко семантический тег h1 </h1>
+<h2> window - здесь именно заголовки</h2>
+<h3> window </h3>
+<h4> window </h4>
+<h5> window </h5>
+<h6> window </h6>
+<p> семантический тег для параграфа
+<hr>
+hr - br(проводит линию) делит параграфы на абзацы  </p>
+<address> adress - автор хранение информации об авторе</address>
+<q>
+    ::before
+    "для цитаты"
+    ::after
+</q>
+<blockquote><p>taras Для больших цитат </p></blockquote>
+<hr>
+<time data-create=""> time = для обозначения времени</time>
+<hr>
+<b>Жирный шрифт не семантичный тег</b>
+<hr>
+<i>Курсив шрифт не семантичный тег</i>
+<hr>
+<tt>Машинописный текст шрифт не семантичный тег</tt>
+<hr>
+<ss>Deleted шрифт не семантичный тег</ss>
+<hr>
+
+<strong> Жирный шрифт - семантичный тег </strong>
+<hr>
+<em> Курсив - семантичный тег </em>
+<hr>
+<pre>
+<code>
+        pre - сохраняет исходное форматирование текста
+    const text = document.querySelector('.input__text');
+    const addInputText = document.querySelector('.list__input');
+    const inputText = (e) => {
+    const value = e.target.value;
+    const message = `<li>${value}</li>`;
+    addInputText.insertAdjacentHTML('afterbegin', message);
+    }
+    text.addEventListener('click', inputText);
+
+</code>
+</pre>
+<br>
+<small> small - визуальное уменьшение текста - семантика - логическое выделение сносок</small>
+<hr>
+<del> del перечеркивает текст - семантичный тег</del>
+<br>
+<ins> ins - подчеркивает текст - семантичный тег</ins>
+<br>
+<sub> sub - нижний индекс для формул </sub>
+<br>
+<sup> sup - верхний индекс для формул </sup>
+<br>
+<ul>
+    <li> UL list</li>
+    <li> spisok</li>
+    <li> spisok</li>
+    <li> spisok</li>
+    <li> spisok</li>
+</ul>
+<br>
+
+<ol start="10">
+    <li> OL list</li>
+    <li> spisok</li>
+    <li> spisok</li>
+    <li> spisok</li>
+    <li> spisok</li>
+</ol>
+<br>
+
+<ol reversed>
+    <li> list OL reversed</li>
+    <li> spisok</li>
+    <li> spisok</li>
+    <li> spisok</li>
+
+</ol>
+<br>
+<ul>
+    <li> UL list</li>
+    <li> spisok</li>
+    <li> spisok
+        <ol start="10">
+            <li> OL вложенный list</li>
+            <li> spisok</li>
+            <li> spisok</li>
+            <li> spisok</li>
+            <li> spisok</li>
+        </ol>
+    </li>
+    <li> spisok</li>
+    <li> spisok</li>
+</ul>
+<br>
+
+<ul>
+    <li> UL list</li>
+    <li> spisok</li>
+    <li> spisok
+        <ul>
+            <li> UL вложенный list</li>
+            <li> spisok</li>
+            <li> spisok</li>
+            <li> spisok</li>
+            <li> spisok</li>
+        </ul>
+    </li>
+    <li> spisok</li>
+    <li> spisok</li>
+</ul>
+<br>
+<ol>
+    <li> OL list</li>
+    <li> spisok</li>
+    <li> spisok
+        <ol>
+            <li> OL вложенный list в OL</li>
+            <li> spisok</li>
+            <li> spisok</li>
+            <li> spisok</li>
+            <li> spisok</li>
+        </ol>
+        <br></li>
+    <li> spisok</li>
+    <li> spisok</li>
+</ol>
+<br>
+
+<dl> DL список определений definition list
+    <dt> DT - definition termine</dt>
+    <dd> DD - поясняющий текст термина</dd>
+
+</dl>
+<br>
+
+<picture> picture - для source
+    <source media="(min-width: 1024px)" srcset="https://picsum.photos/600/600">
+    <source media="(min-width: 768px)" srcset="https://picsum.photos/300/300">
+    <source media="(min-width: 360px)" srcset="https://picsum.photos/100/100">
+    <img src="https://picsum.photos/300/300" alt="Логотип ЛИТМИР">
+</picture>
+<hr>
+<figure>
+    <img src="https://picsum.photos/300/300" alt="Логотип ЛИТМИР">
+    <figcaption> Описание картинок семантика figure img
+        figcaption
+    </figcaption>
+
+</figure>
+<hr>
+
+<table id="table">
+    <caption>Заголовок таблицы</caption>
+    <thead>
+    <tr>
+        <th>Валидная верстка</th>
+        <th>Валидная верстка</th>
+        <th>Валидная верстка</th>
+        <th>Валидная верстка</th>
+        <th>Валидная верстка</th>
+        <th>Валидная верстка</th>
+        <th>Валидная верстка</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td colspan="3">Валидная верстка таблицы - одна строка таблицы</td>
+        <td>Валидная</td>
+        <td>Валидная</td>
+        <td>Валидная</td>
+        <td>Валидная</td>
+        <td>Валидная</td>
+        <td>Валидная</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td rowspan="4"> Валидная верстка</td>
+        <td>Валидная верстка</td>
+        <td>Валидная верстка</td>
+        <td>Валидная верстка</td>
+        <td>Валидная верстка</td>
+        <td>Валидная верстка</td>
+        <td>Валидная верстка</td>
+
+
+    </tr>
+    </tfoot>
+
+
+</table>
+<hr>
+<a href="tel:=123-44-44" target="_blank">+123-44-44</a>
+<hr>
+<a href="mailto:shev-taras@ya.ru" target="_blank">shev-taras@ya.ru</a>
+<hr>
+<a href="skype:shev-taras" target="_blank">shev-taras</a>
+<hr>
+<a href="#started">В начало</a>
+<br>
+<button type="button" autofocus> autofocus - фокусирует на кнопке можно сразу нажать по пробелу</button>
+<br>
+<button type="submit" autofocus> submit - в составе формы</button>
+<br>
+<button type="reset"> reset - в составе формы</button>
+<br>
+<button type="button" disabled> disabled - отключает кнопку</button>
+<br>
+<abbr title="HyperText Markup Language">HTML - дает расшифровку со всплывающей подсказкой</abbr>
+<br>
+<input list="list">
+<datalist id="list">
+    <option> Junior</option>
+    <option> Middle</option>
+    <option> Senior</option>
+</datalist>
+<hr>
+
+<meter value="0" max="100" low="100" high="60"> Course Progress</meter>
+<hr>
+<meter value="20" max="100" low="100" high="60"> Course Progress</meter>
+<hr>
+<meter value="80" max="100" low="100" high="60"> Course Progress</meter>
+<hr>
+<meter value="100" max="100" low="100" high="60"> Course Progress</meter>
+<hr>
+
+<progress value="80" max="100"> Progress</progress>
+<hr>
+
+<noscript> Видно при отключении скриптов</noscript>
+<mark> teg mark - Marked</mark>
+<br>
+
+<canvas id="example" width="300" height="300">
+    <script>
+        const circlesCanvas = document.querySelector('#example');
+        if (circlesCanvas && circlesCanvas.getContext) {
+            const context = circlesCanvas.getContext('2d');
+            context.fillStyle = "#000";
+            context.beginPath();
+            context.arc(100, 100, 100, 0, Math.PI * 2, true);
+            context.closePath();
+            context.stroke();
+            context.fill();
+        }
+    </script>
+</canvas>
+<br>
+<header> header - шапка сайта верхняя часть сайта - может содержать - nav</header>
+<br>
+<main> main -основное содержание сайта не должно содержать header nav footer</main>
+<br>
+<section> sextion - универсальный тег можно внутрь вкладывать header & footer</section>
+<br>
+<aside> SideBar || боковая панель - блок сбоку для размещения дополнительной информации</aside>
+<br>
+<footer> footer - данный тег имя автора дата документа копирайт ссылки и т д</footer>
+<br>
+<article> article - задает содержание сайта новость статья - семантическое содержание</article>
+<br>
+<form action="formHandler.js" name="simple form" autocomplete="on" novalidate>
+    <fieldset>
+        <legend> Name forms</legend>
+        <label> Input Text <input type="text"> </label>
+        <br>
+        <label> Input name <input type="text"> </label>
+        <br>
+        <label> Отправить date <input type="submit"> </label>
+            <br>
+            <label> Select input
+                <select>
+                <option value="Junior"> Junior </option>
+                <option value="Middle"> Middle </option>
+                <option value="Senior"> Senior </option>
+                </select>
+            </label>
+            <br>
+        <label> Select input
+            <select>
+                <optgroup label="Speciality">
+                    <option value="Junior"> Junior </option>
+                    <option value="Middle"> Middle </option>
+                    <option value="Senior"> Senior </option>
+                </optgroup>
+                <optgroup label="Finality">
+                    <option value="Junior"> Junior </option>
+                    <option value="Middle"> Middle </option>
+                    <option value="Senior"> Senior </option>
+                </optgroup>
+            </select>
+        </label>
+        <br>
+            <label> Input text in text area <textarea rows="50" cols="50" name="text"> Input text </textarea> </label>
+            <br>
+
+    </fieldset>
+
+
+</form>
+<br>
+<textarea rows="10" cols="20"></textarea>
+<br>
+<textarea rows="10" cols="20" name="test"> name="test" </textarea>
+<br>
+<textarea rows="10" cols="20" autofocus> autofocus </textarea>
+<br>
+<textarea rows="10" cols="20" disabled> disabled </textarea>
+<br>
+<textarea rows="10" cols="20" readonly> This text you can't change </textarea>
+<br>
+<textarea rows="10" cols="20" placeholder="input you message..."></textarea>
+<br>
+<textarea rows="10" cols="20" maxlength="3"> maxlength </textarea>
+<br>
+<textarea rows="10" cols="20" required> Requeired </textarea>
+<br>
+<form>
+    <textarea rows="10" cols="20" required></textarea>
+    <input type="submit" value="Send">
+</form>
+
+<select multiple>
+    <option value="Junior"> Junior </option>
+    <option value="Middle"> Middle </option>
+    <option value="Senior"> Senior </option>
+
+</select>
+<hr>
+<select>
+    <option value="Junior"> Junior </option>
+    <option value="Middle" label="Back-end"> Middle </option>
+    <option value="sel" selected> Selected </option>
+    <option value="dis" disabled> Disabled </option>
+</select>
+<hr>
+
+<input type="number" min="1" max="5">
+<hr>
+<input type="number" step="5">
+<hr>
+<input type="submit" value="Submit form">
+<hr>
+<input type="reset" value="Reset form">
+<hr>
+<input type="text" list="list">
+<br>
+<input type="image" src="ico.png" alt="img" height="30px">
+<datalist>
+    <option value="Junior"></option>
+    <option value="Middle"></option>
+    <option value="Senior"></option>
+</datalist>
+<input type="hidden" value="hidden info">
+<br>
+<input type="file">
+<br>
+<input type="file" multiple>
+<br>
+<input type="file" accept="application/pdf">
+<br>
+<input type="checkbox" value="options1" checked>
+<br>
+<input type="checkbox" value="options1">
+<br>
+<input type="checkbox" value="options1">
+<br>
+
+<input type="radio" name="value" value="options1">
+<br>
+<input type="radio" name="value" value="options2" checked>
+<br>
+<input type="radio" name="value" value="options3">
+<br>
+<video width="320" height="240" src="AddEventListener.mp4" controls>
+
+    "Воспроизведение видео"
+</video>
+<hr>
+<video width="320" height="240" src="AddEventListener.mp4" controls loop>
+
+    "Воспроизведение видео"
+</video>
+<hr>
+<video width="320" height="240" src="AddEventListener.mp4" controls loop autoplay muted poster="fonts.png" preload="auto">
+
+    "Воспроизведение видео"
+</video>
+<hr>
+<video width="320" height="240" src="AddEventListener.mp4" controls loop>
+
+    "Воспроизведение видео"
+</video>
+<hr>
+<video width="320" height="240" src="AddEventListener.mp4" controls autoplay >
+
+    "Воспроизведение видео"
+</video>
+<hr>
+<video width="320" height="240" src="AddEventListener.mp4" controls poster="fonts.png">
+
+    "Воспроизведение видео"
+</video>
+<hr>
+<audio controls src="enrique-iglesias-be-with-you.mp3">
+
+</audio>
+<hr>
+<h2> Универсальные атрибуты -  применяются почти ко всем тегам</h2>
+<h2> id="" - id уникален только один у элемента - цель взаимодействие с JS <br>
+
+<code> class="text" class="text idea" </code></h2>
+<p> title="" Нативная браузерная подсказка <br>
+    style="не использовать в html" Нарушают разделение ответственности<br>
+    contenteditable - элемент доступен для редактирования - после редактирования обновляя страницы все изменения удаляются<br>
+    spellcheck="true" - проверка правописания<br>
+    hidden - скрывать элемент но сохраняет в DOM<br>
+    tabindex="1" -  премещение обводки по очередного с одного элемента на другой<br>
+    dir="rtl" - direction изменение направления текста<br>
+    lang="fr" - меняет кавычки для другого языка подключает определенные грамматические особенности<br>
+
+</p>
+
+</body>
+</html>
